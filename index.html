@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>    </title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="script.js"></script>
-  </body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Aaron's Quiz</title>
+	<link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+	<header>
+		<h1 class="score">Score: 0</h1>
+		<h1 class="time-left">Time Left: 60</h1>
+	</header>
+
+	<section>
+		<div class="hidden highscores">
+			<ul class="score-list">
+
+			</ul>
+		</div>
+		<div class="start">
+			<h1>The best quiz ever!</h1>
+			<p>Are you an IT pro?</p>
+			<button onclick="nextQuestion(true)">Start Quiz</button>
+			<button onclick="setScoreboard()">Show Scoreboard</button>
+		</div>
+		<div class="hidden restart">
+			<h1>You have finished the quiz!</h1>
+			<p>Please come back!</p>
+			<button onclick="nextQuestion(true)">Restart Quiz</button>
+			<button onclick="setScoreboard()">Show Scoreboard</button>
+			<input id="enter-name"/>
+			<button id="name-button">Submit Initials</button>
+		</div>
+		<span class="hidden quiz">
+			<p class="question"></p>
+			<button onclick="checkAnswer(0)"></button>
+			<button onclick="checkAnswer(1)"></button>
+			<button onclick="checkAnswer(2)"></button>
+			<button onclick="checkAnswer(3)"></button>
+		</span>
+	</section>
+	<script src="./assets/questions.js"></script>
+	<script src="./assets/script.js"></script>
+</body>
 </html>
